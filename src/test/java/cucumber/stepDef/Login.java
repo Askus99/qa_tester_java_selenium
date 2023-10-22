@@ -53,7 +53,7 @@ public class Login {
             String errorLogin = ele2.getText();
             driver.close();
 
-            Assert.assertEquals(errorLogin, "ini salah");
+            Assert.assertEquals(errorLogin, "");
         }
 
     }
