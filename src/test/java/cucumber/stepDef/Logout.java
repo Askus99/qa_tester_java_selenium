@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Logout {
     WebDriver driver;
@@ -31,6 +32,11 @@ public class Logout {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement ele1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='react-burger-menu-btn']")));
         ele1.click();
+        try{
+            Thread.sleep(2000);
+        }catch(InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         driver.findElement(By.xpath("//a[contains(text(), 'Logout')]")).click();
         driver.close();
     }

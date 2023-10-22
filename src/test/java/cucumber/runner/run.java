@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/java/cucumber/resources/features/Login.feature",
                 "src/test/java/cucumber/resources/features/Cart.feature",
-                "src/test/java/cucumber/resources/features/Logout.feature",},
+                "src/test/java/cucumber/resources/features/Logout.feature",
+                "src/test/java/cucumber/resources/features/Checkout.feature",},
         glue = "cucumber.stepDef",
         plugin = {"html:target/HTML_report.html"}
 )
